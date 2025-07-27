@@ -90,9 +90,10 @@ body {
 }
 
 .link-logo {
-    height: 80px;
-    width: auto;
-    margin-right: 20px;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    margin-right: 15px;
     position: relative;
     z-index: 1;
     filter: brightness(0.8);
