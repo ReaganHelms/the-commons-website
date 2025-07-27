@@ -55,7 +55,7 @@ body {
 
 .link-item {
     display: block;
-    padding: clamp(16px, 4vw, 20px) clamp(20px, 5vw, 30px);
+    padding: clamp(12px, 3vw, 15px) clamp(20px, 5vw, 30px);
     background: #fff;
     border: 2px solid #f0f0f0;
     border-radius: 15px;
@@ -90,9 +90,9 @@ body {
 }
 
 .link-logo {
-    height: 18px;
+    height: 95px;
     width: auto;
-    margin-right: 8px;
+    margin-right: 12px;
     position: relative;
     z-index: 1;
     filter: brightness(0.8);
