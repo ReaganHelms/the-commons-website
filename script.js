@@ -44,3 +44,52 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(link);
     });
 });
+
+// Contact Form Functions
+function showContactForm() {
+    document.getElementById('contactModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function hideContactForm() {
+    document.getElementById('contactModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('contactModal');
+    if (event.target === modal) {
+        hideContactForm();
+    }
+}
+
+// Handle form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                alert('Thank you! Your message has been sent successfully.');
+                contactForm.reset();
+                hideContactForm();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        }).catch(error => {
+            alert('Sorry, there was an error sending your message. Please try again or contact us directly at info@sdchurch.com');
+            console.error('Error:', error);
+        });
+    });
+});

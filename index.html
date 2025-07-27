@@ -27,7 +27,7 @@
                 <span class="link-text">Counseling Center</span>
             </a>
             
-            <a href="https://www.sdchurch.com/contact" class="link-item" target="_blank">
+            <a href="#" class="link-item" onclick="showContactForm(); return false;">
                 <span class="link-text">Contact Us</span>
             </a>
             
@@ -39,6 +39,35 @@
         <footer class="footer">
             <p>&copy; 2024 The Commons. All rights reserved.</p>
         </footer>
+    </div>
+    
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideContactForm()">&times;</span>
+            <h2>Contact The Commons</h2>
+            <form id="contactForm" action="https://formspree.io/f/info@sdchurch.com" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone (optional):</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <input type="hidden" name="_to" value="info@sdchurch.com">
+                <input type="hidden" name="_subject" value="Contact from The Commons Website">
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
