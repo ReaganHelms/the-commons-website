@@ -89,6 +89,20 @@ body {
     z-index: 1;
 }
 
+.link-logo {
+    height: 24px;
+    width: auto;
+    margin-right: 12px;
+    position: relative;
+    z-index: 1;
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.link-item:hover .link-logo {
+    filter: brightness(1) invert(1);
+}
+
 .ripple {
     position: absolute;
     border-radius: 50%;
