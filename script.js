@@ -64,32 +64,13 @@ window.onclick = function(event) {
     }
 }
 
-// Handle form submission
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
+// Handle form submission with fallback approach
+function submitForm(form) {
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.textContent = 'Sending...';
+    submitButton.disabled = true;
     
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                alert('Thank you! Your message has been sent successfully.');
-                contactForm.reset();
-                hideContactForm();
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        }).catch(error => {
-            alert('Sorry, there was an error sending your message. Please try again or contact us directly at info@sdchurch.com');
-            console.error('Error:', error);
-        });
-    });
-});
+    // Let the form submit naturally to Formspree
+    // Formspree will handle the redirect and show a thank you page
+    return true;
+}
