@@ -15,17 +15,17 @@
         </div>
         
         <div class="links">
-            <a href="https://www.sdchurch.com" class="link-item" target="_blank">
+            <a href="#" class="link-item" onclick="showCard('weekend-services'); return false;">
                 <img src="https://images.squarespace-cdn.com/content/v1/5d76b6c7de6d4c7fce9451b5/1598555471634-5UYZ85WZ9SGR5JIJ92QB/Asset+2.png?format=750w" alt="New Com Logo" class="link-logo">
                 <span class="link-text">Weekend Services</span>
             </a>
             
-            <a href="https://www.ascendroasters.com" class="link-item" target="_blank">
+            <a href="#" class="link-item" onclick="showCard('ascend-coffee'); return false;">
                 <img src="https://www.ascendroasters.com/cdn/shop/files/AScend-Logo-Black-Clear.png?v=1721678881&width=340" alt="Ascend Coffee Roasters Logo" class="link-logo">
                 <span class="link-text">Ascend Coffee Roasters</span>
             </a>
             
-            <a href="#" class="link-item" onclick="alert('Counseling center website coming soon! Please contact us for more information.'); return false;">
+            <a href="#" class="link-item" onclick="showCard('counseling'); return false;">
                 <span class="link-text">Counseling Center</span>
             </a>
             
@@ -33,7 +33,7 @@
                 <span class="link-text">Contact Us</span>
             </a>
             
-            <a href="https://www.sdchurch.com/vision" class="link-item" target="_blank">
+            <a href="#" class="link-item" onclick="showCard('about'); return false;">
                 <span class="link-text">About The Commons</span>
             </a>
         </div>
@@ -69,6 +69,71 @@
                 <input type="hidden" name="_replyto" value="info@sdchurch.com">
                 <button type="submit">Send Message</button>
             </form>
+        </div>
+    </div>
+
+    <!-- Card Modals -->
+    <div id="weekend-services-card" class="modal card-modal">
+        <div class="card-content">
+            <span class="close" onclick="hideCard('weekend-services')">&times;</span>
+            <div class="card-header">
+                <img src="https://images.squarespace-cdn.com/content/v1/5d76b6c7de6d4c7fce9451b5/1598555471634-5UYZ85WZ9SGR5JIJ92QB/Asset+2.png?format=750w" alt="Weekend Services" class="card-header-image">
+            </div>
+            <div class="card-body">
+                <h2>Weekend Services</h2>
+                <p>Join us for worship, community, and connection every weekend. Our services are designed to be welcoming for everyone, whether you're new to faith or have been walking with Jesus for years.</p>
+                <p>We gather together to worship God, learn from His Word, and build meaningful relationships with one another. Come as you are and experience the love of Christ in community.</p>
+                <a href="https://www.sdchurch.com" target="_blank" class="card-button">Visit Website</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="ascend-coffee-card" class="modal card-modal">
+        <div class="card-content">
+            <span class="close" onclick="hideCard('ascend-coffee')">&times;</span>
+            <div class="card-header">
+                <img src="https://www.ascendroasters.com/cdn/shop/files/AScend-Logo-Black-Clear.png?v=1721678881&width=340" alt="Ascend Coffee Roasters" class="card-header-image">
+            </div>
+            <div class="card-body">
+                <h2>Ascend Coffee Roasters</h2>
+                <p>Experience exceptional coffee at The Commons through our partnership with Ascend Coffee Roasters. We're proud to serve locally roasted, ethically sourced coffee that brings our community together.</p>
+                <p>Whether you need your morning fuel or want to connect with friends over a cup, our coffee bar is open and ready to serve you with premium coffee and warm hospitality.</p>
+                <a href="https://www.ascendroasters.com" target="_blank" class="card-button">Visit Website</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="counseling-card" class="modal card-modal">
+        <div class="card-content">
+            <span class="close" onclick="hideCard('counseling')">&times;</span>
+            <div class="card-header">
+                <div class="card-header-placeholder">
+                    <h3>Counseling Center</h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <h2>Counseling Center</h2>
+                <p>Our professional counseling center provides compassionate, faith-based counseling services to individuals, couples, and families in our community.</p>
+                <p>We believe in the power of healing and restoration through professional counseling combined with biblical principles. Our licensed counselors are here to walk alongside you in your journey toward wholeness.</p>
+                <div class="card-button disabled">Website Coming Soon</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about-card" class="modal card-modal">
+        <div class="card-content">
+            <span class="close" onclick="hideCard('about')">&times;</span>
+            <div class="card-header">
+                <div class="card-header-placeholder">
+                    <h3>About The Commons</h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <h2>About The Commons</h2>
+                <p>The Commons is more than just a building—it's a place where community comes alive. We believe in creating spaces where people can gather, connect, and grow together in meaningful ways.</p>
+                <p>Our vision is to be a hub for worship, community engagement, and authentic connection. From weekend services to coffee and counseling, we're here to serve our community with love and purpose.</p>
+                <a href="https://www.sdchurch.com/vision" target="_blank" class="card-button">Learn More</a>
+            </div>
         </div>
     </div>
 </body>

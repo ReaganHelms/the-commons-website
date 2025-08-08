@@ -74,3 +74,27 @@ function submitForm(form) {
     // Formspree will handle the redirect and show a thank you page
     return true;
 }
+
+// Card Functions
+function showCard(cardId) {
+    const modal = document.getElementById(cardId + '-card');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function hideCard(cardId) {
+    const modal = document.getElementById(cardId + '-card');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close card when clicking outside of it
+window.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.card-modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
