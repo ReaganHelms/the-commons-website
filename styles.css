@@ -532,8 +532,13 @@ body {
     }
     
     .card-body {
-        padding: 20px;
-        padding-bottom: 30px;
+        padding: 15px;
+        padding-bottom: 25px;
+    }
+    
+    .card-body p {
+        margin-bottom: 12px;
+        font-size: 15px;
     }
     
     .card-body h2 {
