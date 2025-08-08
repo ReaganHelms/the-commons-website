@@ -522,9 +522,9 @@ body {
 
 @media (max-width: 768px) {
     .card-content {
-        margin: 2vh auto;
+        margin: 5vh auto 10vh auto;
         width: 95%;
-        max-height: 96vh;
+        max-height: 85vh;
     }
     
     .card-header {
@@ -533,10 +533,38 @@ body {
     
     .card-body {
         padding: 20px;
+        padding-bottom: 30px;
     }
     
     .card-body h2 {
         font-size: 20px;
+    }
+    
+    .card-buttons {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .card-content {
+        margin: 5vh auto 15vh auto;
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 768px) and (max-height: 700px) {
+    .card-content {
+        margin: 2vh auto 12vh auto;
+        max-height: 75vh;
+    }
+    
+    .card-header {
+        height: 120px;
+    }
+    
+    .card-body {
+        padding: 15px;
+        padding-bottom: 25px;
     }
 }
 
