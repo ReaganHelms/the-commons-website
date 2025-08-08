@@ -604,4 +604,15 @@ body {
         background: #ecf0f1;
         color: #2d3748;
     }
+    
+    .card-button:not(.card-button-secondary) {
+        background: #3498db;
+        color: white;
+    }
+    
+    .card-button:not(.card-button-secondary):hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+    }
 }
