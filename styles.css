@@ -476,7 +476,9 @@ body {
 }
 
 .card-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 24px;
     background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
     color: white;
@@ -485,6 +487,8 @@ body {
     font-weight: 600;
     transition: all 0.3s ease;
     margin-top: 20px;
+    height: 48px;
+    box-sizing: border-box;
 }
 
 .card-button:hover {
@@ -507,6 +511,7 @@ body {
     gap: 15px;
     margin-top: 20px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .card-button-secondary {
