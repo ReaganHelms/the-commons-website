@@ -336,20 +336,25 @@ body {
 
 #contactForm button {
     width: 100%;
-    padding: 15px;
+    padding: 12px 16px;
     background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
     color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 #contactForm button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 #contactForm button:active {
@@ -680,5 +685,14 @@ body {
     .action-button.disabled {
         background: #7f8c8d;
         color: #34495e;
+    }
+    
+    #contactForm button {
+        background: #3498db;
+    }
+    
+    #contactForm button:hover {
+        background: #2980b9;
+        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
     }
 }
