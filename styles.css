@@ -593,4 +593,15 @@ body {
     .link-item:hover .link-logo {
         filter: brightness(1) invert(1);
     }
+    
+    .card-button-secondary {
+        background: transparent;
+        color: #ecf0f1;
+        border: 2px solid #ecf0f1;
+    }
+    
+    .card-button-secondary:hover {
+        background: #ecf0f1;
+        color: #2d3748;
+    }
 }
