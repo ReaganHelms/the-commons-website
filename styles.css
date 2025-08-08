@@ -269,8 +269,7 @@ body {
 
 .close {
     color: #666;
-    float: right;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
     position: absolute;
@@ -285,6 +284,7 @@ body {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.9);
     transition: all 0.3s ease;
+    line-height: 1;
 }
 
 .close:hover {
