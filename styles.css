@@ -732,3 +732,12 @@ body {
     border-radius: 8px;
     padding: 4px;
 }
+
+/* Image Cropping Adjustments */
+.card-header img[src="commons-building.jpg"] {
+    object-position: center top;
+}
+
+.card-header img[src="church-worship.jpg"] {
+    object-position: center 10%;
+}
