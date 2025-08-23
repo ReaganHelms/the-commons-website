@@ -725,3 +725,10 @@ body {
     object-fit: contain;
     z-index: 10;
 }
+
+/* Commons Logo Styling */
+.link-item img[src="commons-logo.png"] {
+    background: transparent;
+    border-radius: 8px;
+    padding: 4px;
+}
