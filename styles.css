@@ -708,3 +708,20 @@ body {
         transform: scale(1.05);
     }
 }
+
+/* TRR Composite Header */
+.trr-composite-header {
+    position: relative;
+}
+
+.trr-logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 40%;
+    max-width: 60%;
+    object-fit: contain;
+    z-index: 10;
+}
