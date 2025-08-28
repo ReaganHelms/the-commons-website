@@ -734,10 +734,10 @@ body {
 }
 
 /* Image Cropping Adjustments */
-.card-header img[src="commons-building.jpg"] {
+.card-header img[src="commons-card-new.png"] {
     object-position: center top;
 }
 
-.card-header img[src="church-worship.jpg"] {
+.card-header img[src="church-card-new.png"] {
     object-position: center 10%;
 }
