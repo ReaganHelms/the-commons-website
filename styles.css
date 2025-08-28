@@ -98,6 +98,18 @@ body {
     z-index: 1;
     filter: brightness(0.8);
     transition: filter 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Specific logo adjustments for better alignment */
+.link-item img[src="commons-nav-logo.png"] {
+    object-fit: cover;
+    object-position: center;
+}
+
+.link-item img[src="trr-nav-logo.png"] {
+    object-fit: cover;
+    object-position: center;
 }
 
 .link-item:hover .link-logo {
