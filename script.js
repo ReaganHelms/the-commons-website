@@ -67,6 +67,15 @@ window.onclick = function(event) {
 // Handle form submission with fallback approach
 function submitForm(form) {
     const submitButton = form.querySelector('button[type="submit"]');
+    const subjectField = form.querySelector('#subject');
+    
+    // Prepend "[The Commons Website] " to the subject if it doesn't already have it
+    if (subjectField && subjectField.value) {
+        if (!subjectField.value.startsWith('[The Commons Website]')) {
+            subjectField.value = '[The Commons Website] ' + subjectField.value;
+        }
+    }
+    
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
     
@@ -98,3 +107,35 @@ window.addEventListener('click', function(event) {
         }
     });
 });
+
+// Toggle venue pricing information
+function toggleVenuePricing() {
+    const pricingDiv = document.getElementById('venue-pricing');
+    const weddingDiv = document.getElementById('wedding-pricing');
+    
+    // Hide wedding pricing if it's showing
+    weddingDiv.style.display = 'none';
+    
+    // Toggle venue pricing
+    if (pricingDiv.style.display === 'none') {
+        pricingDiv.style.display = 'block';
+    } else {
+        pricingDiv.style.display = 'none';
+    }
+}
+
+// Toggle wedding pricing information
+function toggleWeddingPricing() {
+    const pricingDiv = document.getElementById('venue-pricing');
+    const weddingDiv = document.getElementById('wedding-pricing');
+    
+    // Hide venue pricing if it's showing
+    pricingDiv.style.display = 'none';
+    
+    // Toggle wedding pricing
+    if (weddingDiv.style.display === 'none') {
+        weddingDiv.style.display = 'block';
+    } else {
+        weddingDiv.style.display = 'none';
+    }
+}

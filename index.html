@@ -35,7 +35,12 @@
                 <span class="link-text">Counseling Center</span>
             </a>
             
-            <a href="#" class="link-item" onclick="showContactForm(); return false;">
+            <a href="#" class="link-item" onclick="showCard('venue'); return false;">
+                <img src="venue-nav-logo.webp" alt="The Commons Venue Logo" class="link-logo">
+                <span class="link-text">The Commons Venue</span>
+            </a>
+            
+            <a href="#" class="link-item contact-button-special" onclick="showContactForm(); return false;">
                 <span class="link-text">Contact Us</span>
             </a>
         </div>
@@ -64,10 +69,13 @@
                     <input type="tel" id="phone" name="phone">
                 </div>
                 <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <input type="hidden" name="_subject" value="Contact from The Commons Website">
                 <input type="hidden" name="_replyto" value="info@sdchurch.com">
                 <button type="submit">Send Message</button>
             </form>
@@ -148,11 +156,6 @@
                 <p>The Commons is a community-driven environment rooted in the common good of loving neighbors and serving the community.</p>
                 <p>Our vision is to be a hub for worship, community engagement, and authentic connection. From weekend gatherings to coffee and counseling, we're here to love our community with shared purpose.</p>
             </div>
-            <div class="card-action-bar">
-                <a href="https://www.downtownvista.com/vision" target="_blank" class="action-button">Vision</a>
-                <a href="https://www.downtownvista.com" target="_blank" class="action-button">Church</a>
-                <a href="#" onclick="showContactForm(); return false;" class="action-button">Contact</a>
-            </div>
         </div>
     </div>
 
@@ -173,6 +176,83 @@
                 <a href="mailto:hensley2542@gmail.com" class="action-button">Contact</a>
                 <a href="https://www.facebook.com/newcomchurchsd" target="_blank" class="action-button">Stream</a>
                 <a href="https://www.downtownvista.com" target="_blank" class="action-button">Church</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="venue-card" class="modal card-modal">
+        <div class="card-content">
+            <span class="close" onclick="hideCard('venue')">&times;</span>
+            <div class="card-header">
+                <img src="The Commons Venu.png" alt="The Commons Venue Interior" class="card-header-image">
+            </div>
+            <div class="card-body">
+                <h2>The Commons Venue</h2>
+                <p>Our modern indoor wedding venue is the ideal setting for couples seeking to celebrate their love in a sleek and sophisticated urban space. With its contemporary design, open floor plan, and versatile décor options, this blank canvas allows you to bring your unique vision to life.</p>
+                <p>Located in the heart of the newly revamped city of Vista on the vibrant Paseo Santa Fe, it combines the convenience of an urban setting with the freedom to create a wedding that reflects your style and personality.</p>
+                
+                <div id="venue-pricing" style="display: none; margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.05); border-radius: 10px;">
+                    <h3 style="color: #333;">Venue Rental Details</h3>
+                    <p>A reservation includes the venues indoor and outdoor spaces for up to 5 hours total, which includes set up, event time, as well as break down.</p>
+                    <p>Private events available weekdays Mon-Thurs based on availability.</p>
+                    <p><strong style="color: #333;">Earliest arrival time:</strong> 10am<br>
+                    <strong style="color: #333;">Latest end time:</strong> 10pm</p>
+                    
+                    <h4 style="color: #333;">Rental Fee Breakdown:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong style="color: #333;">1-50 Guests:</strong> $2,000</li>
+                        <li><strong style="color: #333;">51-200 Guests:</strong> $3,000</li>
+                        <li><strong style="color: #333;">Administration Fee:</strong> +$350</li>
+                        <li><strong style="color: #333;">Additional Hours:</strong> $500 each</li>
+                    </ul>
+                    
+                    <h4 style="color: #333; margin-top: 20px;">Included in Venue Rental Fee:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>5hr Venue Rental</li>
+                        <li>200 Chairs</li>
+                        <li>Cocktail Tables</li>
+                        <li>Tables for up to 200</li>
+                        <li>Onsite Parking</li>
+                        <li>Market Lighting</li>
+                    </ul>
+                    
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="mailto:hello@thecommonsvenue.com" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Contact for Booking</a>
+                    </div>
+                </div>
+                
+                <div id="wedding-pricing" style="display: none; margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.05); border-radius: 10px;">
+                    <h3 style="color: #333; margin-bottom: 15px;">2025 Wedding Pricing</h3>
+                    <ul style="margin-left: 20px;">
+                        <li><strong style="color: #333;">Monday - Thursday:</strong> $2,500</li>
+                        <li><strong style="color: #333;">Friday or Sunday:</strong> $3,000 <em>(Access at 12pm on Sundays)</em></li>
+                        <li><strong style="color: #333;">Saturday:</strong> $4,000</li>
+                        <li><strong style="color: #333;">Administration Fee:</strong> +$350</li>
+                    </ul>
+                    
+                    <div style="margin: 15px 0;">
+                        <p><em>*Major Holiday Pricing May Vary<br>
+                        *All Pricing Subject to Change at the Venue's Discretion</em></p>
+                    </div>
+                    
+                    <h4 style="color: #333; margin-top: 25px;">What's Included?</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>150 Guest Chairs</li>
+                        <li>2 8ft wood hairpin tables</li>
+                        <li>Bridal Suite Getting Ready Area</li>
+                        <li>Indoor Ceremony & Reception Space</li>
+                        <li>Outdoor Cocktail Hour</li>
+                    </ul>
+                    
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="mailto:hello@thecommonsvenue.com" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Contact for Booking</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-action-bar">
+                <a href="https://csevenues.com/the-commons/" target="_blank" class="action-button">Website</a>
+                <a href="#" onclick="toggleVenuePricing(); return false;" class="action-button">Venue Rental</a>
+                <a href="#" onclick="toggleWeddingPricing(); return false;" class="action-button">Wedding Pricing</a>
             </div>
         </div>
     </div>
