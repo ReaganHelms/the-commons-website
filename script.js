@@ -76,6 +76,15 @@ function submitForm(form) {
         }
     }
     
+    // Track contact form submission
+    if (window.goatcounter) {
+        window.goatcounter.count({
+            path: 'contact-form-submit',
+            title: 'Contact Form Submitted',
+            event: true
+        });
+    }
+    
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
     
@@ -89,6 +98,15 @@ function showCard(cardId) {
     const modal = document.getElementById(cardId + '-card');
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    
+    // Track card views
+    if (window.goatcounter) {
+        window.goatcounter.count({
+            path: 'card-view-' + cardId,
+            title: 'Card View: ' + cardId,
+            event: true
+        });
+    }
 }
 
 function hideCard(cardId) {
@@ -119,6 +137,15 @@ function toggleVenuePricing() {
     // Toggle venue pricing
     if (pricingDiv.style.display === 'none') {
         pricingDiv.style.display = 'block';
+        
+        // Track venue pricing view
+        if (window.goatcounter) {
+            window.goatcounter.count({
+                path: 'venue-pricing-view',
+                title: 'Venue Pricing Information Viewed',
+                event: true
+            });
+        }
     } else {
         pricingDiv.style.display = 'none';
     }
@@ -135,7 +162,27 @@ function toggleWeddingPricing() {
     // Toggle wedding pricing
     if (weddingDiv.style.display === 'none') {
         weddingDiv.style.display = 'block';
+        
+        // Track wedding pricing view
+        if (window.goatcounter) {
+            window.goatcounter.count({
+                path: 'wedding-pricing-view',
+                title: 'Wedding Pricing Information Viewed',
+                event: true
+            });
+        }
     } else {
         weddingDiv.style.display = 'none';
+    }
+}
+
+// Track venue contact button clicks
+function trackVenueContact(contactType) {
+    if (window.goatcounter) {
+        window.goatcounter.count({
+            path: contactType,
+            title: 'Venue Contact Button Clicked: ' + contactType,
+            event: true
+        });
     }
 }
